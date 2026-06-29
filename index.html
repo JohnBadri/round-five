@@ -249,7 +249,7 @@
     if(v===CODE){ msg.className='msg ok'; msg.textContent='Code accepted — opening message…'; setTimeout(reveal,450); return; }
     attempts++;
     card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake');
-    if(attempts>=3){ msg.className='msg hint'; msg.textContent='Hint: one digit from each round, in order.'; }
+    if(attempts>=20){ msg.className='msg hint'; msg.textContent='Hint: A clue found in each of the last 4 rounds'; }
     else { msg.className='msg'; msg.textContent='Release code not recognised. ('+attempts+' logged)'; }
     input.value=''; input.focus();
   }
